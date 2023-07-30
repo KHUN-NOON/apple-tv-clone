@@ -1,0 +1,219 @@
+.topbar {
+    width: 100%;
+    z-index: 9999;
+    background-color: #131313;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-width: 320px;
+    height: 48px;
+    min-height: 44px;
+    font-size: 17px;
+}
+
+.topbar-content {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 22px;
+}
+
+.topbar-list {
+    cursor: pointer;
+    margin: 0 -8px;
+    width: auto;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    -webkit-user-select: none;
+    user-select: none;
+    list-style: none;
+    align-items: center;
+    font-size: 12px;
+    padding: 0;
+}
+
+.topbar-list li a {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.07em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--r-globalnav-color);
+    position: relative;
+    z-index: 1;
+    padding: 0 calc(8px / var(--r-globalnav-text-zoom-scale, 1));
+    height: 44px;
+    background: no-repeat;
+    text-decoration: none;
+    white-space: nowrap;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline-offset: -7px;
+    transition: color .32s cubic-bezier(.4,0,.6,1);
+}
+
+.topbar-list li a:hover {
+    color: #fff;
+    height: 30vh;
+}
+
+.sec-topbar {
+    position: sticky;
+    top: var(--r-globalnav-height);
+    left: 0;
+    width: 100%;
+    height: 52px;
+    min-width: 1024px;
+    z-index: 9997;
+    background-color: #111;
+}
+
+.sec-topbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: 1;
+}
+
+.sec-topbar-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: calc(-1 * var(--r-globalnav-height, 0));
+    padding-top: var(--r-globalnav-height, 0);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #131313;
+    transition: background 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+.sec-topbar-bg-none {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: calc(-1 * var(--r-globalnav-height, 0));
+    padding-top: var(--r-globalnav-height, 0);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.sec-topbar-content {
+    margin: 0 auto;
+    max-width: 980px;
+    padding: 0 22px;
+    position: relative;
+    z-index: 2;
+}
+
+.ac-ln-title a {
+    font-size: 21px;
+    line-height: 1.14286;
+    font-weight: 600;
+    letter-spacing: .011em;
+    cursor: default;
+    display: block;
+    float: left;
+    margin: 14px 0 -14px;
+    padding: 0;
+    height: 52px;
+    white-space: nowrap;
+    font-family: 'SF Pro Display Medium';
+    color: #fff;
+}
+
+.ac-ln-menu {
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    float: right;
+    margin-top: -3px;
+    cursor: pointer;
+}
+
+.ac-ln-action {
+    margin-left: 24px;
+    float: left;
+    cursor: pointer;
+}
+
+.ac-ln-actions {
+    float: left;
+    padding-top: 18px;
+}
+
+.ac-ln-title a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.ac-ln-button {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    border-color: rgba(0,0,0,0);
+    border-radius: 980px;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    --sk-button-margin-horizontal: 10px;
+    --sk-button-margin-vertical: 10px;
+    background: linear-gradient(#ffffff,#e5e5e5);
+    border-color: #fafafc;
+    color: #1d1d1f;
+}
+
+.ac-ln-action a:hover {
+    color: gray;
+}
+
+.topbar-flyout-container {
+    // height: 44px;
+    max-height: calc(100vh - var(--r-globalnav-flyout-spacing));
+    overflow: hidden;
+    visibility: visible;
+    display: block;
+    margin-top: -44px;
+    background: var(--globalnav-background);
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: start;
+}
+
+.flyout-scroll-container {
+    margin-top: 44px;
+    max-height: calc(100% - 44px);
+    overflow-y: hidden;
+}
+
+.flyout-content {
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 22px;
+    z-index: 2;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 84px;
+}
