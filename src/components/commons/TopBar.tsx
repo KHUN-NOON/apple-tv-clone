@@ -61,7 +61,7 @@ const TopBar = forwardRef<HTMLDivElement>(function TopBar(_props, ref) {
     )
 })
 
-const FlyOut = forwardRef<HTMLDivElement>((props, ref) => {
+const FlyOut = forwardRef<HTMLDivElement>((_props, ref) => {
     return (
         <div className='topbar-flyout-container' ref={ref}>
             <div className='flyout-scroll-container'>
