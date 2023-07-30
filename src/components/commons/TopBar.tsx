@@ -1,11 +1,11 @@
-import { forwardRef, useEffect, useRef } from 'react'
+import { forwardRef, useRef } from 'react'
 import '../../styles/topbar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faApple } from "@fortawesome/free-brands-svg-icons"
 import { faMagnifyingGlass, faBagShopping } from '@fortawesome/free-solid-svg-icons'
 import { LinkHeaders } from '../../data/home'
 
-const TopBar = forwardRef<HTMLDivElement>(function TopBar(props, ref) {
+const TopBar = forwardRef<HTMLDivElement>(function TopBar(_props, ref) {
     const flyoutRef = useRef<HTMLDivElement | null>(null)
 
     const handleOnMouseEnter = () => {
@@ -34,7 +34,7 @@ const TopBar = forwardRef<HTMLDivElement>(function TopBar(props, ref) {
 
                     {
                         LinkHeaders.map((item, index) => (
-                            <li key={index} onMouseEnter={handleOnMouseEnter}>
+                            <li key={index} onMouseEnter={handleOnMouseEnter} onMouseLeave={handleOnMouseLeave}>
                                 <a href='#'>
                                     {item.title}
                                 </a>

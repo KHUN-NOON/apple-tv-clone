@@ -3,7 +3,7 @@ import '../../styles/topbar.scss'
 
 type DivProps = React.HTMLProps<HTMLDivElement>
 
-const SecondTopBar = forwardRef<HTMLDivElement, DivProps>(function SecondTopBar(props, ref) {
+const SecondTopBar = forwardRef<HTMLDivElement, DivProps>(function SecondTopBar(_props, ref) {
     
 
     return (
